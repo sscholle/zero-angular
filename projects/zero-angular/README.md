@@ -1,9 +1,10 @@
 # ZeroAngular
-Angular wrapper for Zero (sync library).
+Angular bindings for Zero.
 
 ## Dependencies
-- @rocicorp/zero (The Zero core)
-- RxJs
+- Angular v14-19
+- @rocicorp/zero v0.19
+- RxJs v6-7
 
 ## Add Zero as Provider
 

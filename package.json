@@ -1,5 +1,9 @@
 {
   "name": "zero-angular",
+  "description": "Angular bindings for Zero",
+  "author": "Sebastian Scholle",
+  "license": "MIT",
+  "homepage": "https://github.com/sscholle/zero-angular",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",

@@ -1,9 +1,15 @@
 {
   "name": "zero-angular",
+  "description": "Angular bindings for Zero",
+  "author": "Sebastian Scholle",
+  "license": "MIT",
+  "homepage": "https://github.com/sscholle/zero-angular",
   "version": "0.0.1",
   "peerDependencies": {
-    "@angular/common": "^19.2.0",
-    "@angular/core": "^19.2.0"
+    "@angular/common": ">= 14.x <= 19.x",
+    "@angular/core": ">= 14.x <= 19.x",
+    "@angular/router": ">= 14.x <= 19.x",
+    "rxjs": "^6.5.5 || ^7.x"
   },
   "dependencies": {
     "tslib": "^2.3.0",
