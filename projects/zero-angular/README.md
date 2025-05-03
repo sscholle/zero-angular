@@ -11,6 +11,8 @@ Angular wrapper for Zero (sync library).
 import { Zero } from '@rocicorp/zero';
 import { provideZero } from 'zero-angular/zero.service';
 ...
+import { schema } from '../util/schema';// import your schema Instance
+...
     provideZero(new Zero({ schema, server: 'http://localhost:4848', userID: 'anon' }))
 ...
 ```
@@ -20,6 +22,8 @@ import { provideZero } from 'zero-angular/zero.service';
 
 import { ZeroService } from 'zero-angular/zero.service';
 import { QueryService } from 'zero-angular/query.service';
+...
+import { Schema } from '../util/schema';// import your Schema Type
 
 ...
 export class MessagesComponent implements OnInit  {
@@ -43,8 +47,7 @@ export class MessagesComponent implements OnInit  {
   fetchUsingQuerySubscription(){
     // Build the Query using the ZeroService
     let query = this.zeroService.getZero()
-    .query.message
-    .related("medium").related("sender")
+    .query.message.related("medium").related("sender")
     .orderBy("timestamp", "desc")
     .limit(20);
 
@@ -59,7 +62,6 @@ export class MessagesComponent implements OnInit  {
     // Use the Query with the Query Service and Subscribe
     this.zeroQuery.useQuery(query).subscribe(([results, resultType]) => {
       console.log('Query Result:', results, resultType);
-      this.displaymessages = results as DisplayMessage[];
     });
   }
   ...
